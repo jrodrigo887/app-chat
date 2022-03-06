@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Avatar from './Avatar.vue';
+import IconButton from './IconButton.vue';
 
 defineProps({
     name: {
@@ -22,14 +23,17 @@ defineProps({
         type: Boolean,
         default: false
     },
-    src: String
+    src: String,
+    icon: String,
 });
 
 </script>
 <template>
-     <!-- card -->
-    <div class="flex items-center justify-between text-gray-500 rounded-md h-14 px-3 py-4 hover:bg-slate-100 cursor-pointer"
-        :class="active ? 'bg-slate-100' : ''">
+    <!-- card -->
+    <div
+        class="flex items-center justify-between h-14 px-3 py-4 text-gray-500 hover:bg-slate-100 cursor-pointer"
+        :class="!icon ? 'rounded-md' : ''"
+    >
         <div class="flex items-center space-x-3">
             <Avatar :src="src" :shape="shape"></Avatar>
             <div class="text-xs">
@@ -37,6 +41,7 @@ defineProps({
                 <small v-if="office.length > 0">You: {{ office }}</small>
             </div>
         </div>
-        <p class="text-xs">{{ time }}</p>
+        <p v-if="!icon" class="text-xs">{{ time }}</p>
+        <IconButton v-else :icon="icon" customClass="h-5 w-5 text-primary"></IconButton>
     </div>
 </template>
