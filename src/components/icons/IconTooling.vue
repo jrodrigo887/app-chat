@@ -1,4 +1,12 @@
 <!-- This icon is from <https://github.com/Templarian/MaterialDesign>, distributed under Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0) license-->
+<script setup lang="ts">
+defineProps({
+  customClass: {
+    type: String,
+    default: 'h-5 w-5 text-gray-400'
+  }
+});
+</script>
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +14,7 @@
     aria-hidden="true"
     role="img"
     class="iconify iconify--mdi"
+    :class="customClass"
     width="24"
     height="24"
     preserveAspectRatio="xMidYMid meet"

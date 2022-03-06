@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer base {
+:root {
+    --h-painel: 90%;
+    font-family: 'Roboto', sans-serif;
+    --tertiary-color: #ff5722;
+    --quaternary-color: #9c27b0;
+    --quinary-color: #3f51b5;
+    --senary-color: #2196f3;
+    --septenary-color: #009688;
+
+    --primary-color: #6749DC;
+    --secondary-color: #EDEBF9;
+}
+    
+}
+

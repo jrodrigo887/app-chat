@@ -1,0 +1,15 @@
+<script setup lang="ts">
+defineProps({
+  customClass: {
+    type: String,
+    default: 'h-5 w-5 text-gray-400'
+  }
+});
+</script>
+<template>
+  <svg width="24" :class="customClass" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.753 19.389C16.758 20.394 18.385 20.394 19.39 19.389C20.395 18.384 20.395 16.757 19.39 15.752C18.385 14.747 16.758 14.747 15.753 15.752C14.749 16.757 14.749 18.386 15.753 19.389" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 21L19.39 19.389" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21 12V7.94C21 6.836 20.105 5.94 19 5.94H12.529C12.198 5.94 11.888 5.776 11.702 5.502L10.297 3.437C10.111 3.164 9.802 3 9.471 3H5C3.895 3 3 3.895 3 5V17C3 18.105 3.895 19 5 19H11" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</template>

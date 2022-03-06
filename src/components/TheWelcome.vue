@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
+import DocumentationIcon from './icons/IconTextSms.vue'
 import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
+import EcosystemIcon from './icons/IconWallet.vue'
+import CommunityIcon from './icons/IconPasteContentSearch.vue'
+import SupportIcon from './icons/IconChatBubble.vue'
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import SupportIcon from './icons/IconSupport.vue'
     </template>
     <template #heading>Documentation</template>
 
-    Vue’s
+    Vues
     <a target="_blank" href="https://v3.vuejs.org/">official documentation</a>
     provides you with all information you need to get started.
   </WelcomeItem>

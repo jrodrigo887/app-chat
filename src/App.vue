@@ -4,12 +4,7 @@ import Page from './components/Page.vue';
 </script>
 
 <template>
-  <Page :hidden="true">
-    <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    </header>
-    <h1>Tela splash</h1>
+  <Page class="box-border bg-gray-100" :hidden="true">
     <Main></Main>
   </Page>
 </template>
