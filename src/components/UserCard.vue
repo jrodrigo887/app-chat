@@ -25,6 +25,10 @@ defineProps({
     },
     src: String,
     icon: String,
+    colorIcon: {
+        type: String,
+        default: 'w-5 h-5 text-gray-400'
+    },
 });
 
 </script>
@@ -42,6 +46,6 @@ defineProps({
             </div>
         </div>
         <p v-if="!icon" class="text-xs">{{ time }}</p>
-        <IconButton v-else :icon="icon" customClass="h-5 w-5 text-primary"></IconButton>
+        <IconButton v-else :icon="icon" :customClass="'h-5 w-5 ' + colorIcon"></IconButton>
     </div>
 </template>

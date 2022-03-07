@@ -80,7 +80,7 @@ const active = ref(false)
                             </div>
 
                             <!-- lista de cards -->
-                            <div class="overflow-y-auto">
+                            <div class="overflow-y-auto light-scroll">
                                 <div class="px-5 space-y-5">
                                     <!-- card -->
                                     <UserCard
@@ -126,9 +126,24 @@ const active = ref(false)
                     </section>
 
                     <!-- 2° colum -->
-                    <div
-                        class="flex-1 w-full h-full flex justify-center items-center font-bold text-gray-600 text-4xl"
-                    >chat</div>
+                    <div class="flex-1 w-full h-full flex flex-col">
+                        <div>
+                            <h1 class="py-7 pl-5 text-gray-600 font-bold">Scouting Group</h1>
+
+                            <div class="w-full bg-slate-100 pl-5">
+                                <p class="w-72 px-1 py-2 text-xs text-primary">
+                                    <span
+                                        class="font-semibold leading-6 opacity-90"
+                                    >Welcome to the Streamline scouting chat</span>
+                                    <br />We can no freely collaborate regarding our current Demand.
+                                    Any questions about the documentation or the project,
+                                    please feel free to get in contact us.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Messages -->
+                        <div>Messages</div>
+                    </div>
 
                     <!-- 3° colum -->
                     <div class="border-l divide-dashed w-[17.25rem] h-full">
@@ -151,7 +166,7 @@ const active = ref(false)
                             <div class="pl-5 h-2/5">
                                 <p class="text-[0.65rem] text-gray-600 font-medium">MEMBERS</p>
                                 <!-- Cards -->
-                                <div class="overflow-y-auto h-full divide-y">
+                                <div class="overflow-y-auto h-full divide-y light-scroll">
                                     <UserCard
                                         :src="houcine"
                                         name="Maia"
@@ -190,12 +205,13 @@ const active = ref(false)
                                 <p class="text-[0.65rem] text-gray-600 font-medium">ADMINS</p>
                                 <!-- Cards -->
 
-                                <div class="overflow-y-auto h-full divide-y">
+                                <div class="overflow-y-auto h-full divide-y light-scroll">
                                     <UserCard
                                         :src="ayo"
                                         name="Maia I"
                                         office="CTO"
                                         :icon="Icons.Chat"
+                                        colorIcon="text-primary"
                                     ></UserCard>
                                     <UserCard
                                         :src="ayo"
