@@ -13,12 +13,11 @@ import ayo from '@/assets/images/ayo.jpg'
 import charles from '@/assets/images/charles.jpg'
 import josep from '@/assets/images/josep.jpg'
 import houcine from '@/assets/images/houcineI.jpg'
+import Mensagem from '@/components/Mensagem.vue';
 
 const out = ref(false);
-function clickar() {
-    out.value = !out.value;
-}
 const active = ref(false)
+
 </script>
 <template>
     <Page class="mx-auto xl:max-w-7xl" :hidden="true">
@@ -140,9 +139,18 @@ const active = ref(false)
                                     please feel free to get in contact us.
                                 </p>
                             </div>
+                            <!-- data da última mensagem -->
+                            <p class="text-xs text-gray-400 py-6 text-center">
+                                Tuesday, Apbril 7th at 1:21PM
+                            </p>
                         </div>
                         <!-- Messages -->
-                        <div>Messages</div>
+                        <div>
+                            <Mensagem />
+                            <Mensagem />
+
+                            <Mensagem :yself="true" />
+                        </div>
                     </div>
 
                     <!-- 3° colum -->
@@ -203,8 +211,8 @@ const active = ref(false)
                             <!-- admins -->
                             <div class="pl-5 pt-5 h-2/5 overflow-hidden">
                                 <p class="text-[0.65rem] text-gray-600 font-medium">ADMINS</p>
-                                <!-- Cards -->
 
+                                <!-- Cards -->
                                 <div class="overflow-y-auto h-full divide-y light-scroll">
                                     <UserCard
                                         :src="ayo"
